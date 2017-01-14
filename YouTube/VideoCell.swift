@@ -31,14 +31,10 @@ class VideoCell: BaseCell {
         didSet {
             titleLabel.text = video?.title
             
-            if let thumbnailImageName = video?.thumbnailImageName {
-                thumbnailImageView.image = UIImage(named: thumbnailImageName)
-            }
+            setupThumbnailImage()
             
+            setupProfileImage()
             
-            if let profileImageName = video?.channel?.profileImageName {
-                userProfileImageView.image = UIImage(named: profileImageName)
-            }
             
             if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
                 
@@ -50,7 +46,6 @@ class VideoCell: BaseCell {
             }
             
             // Measure title text
-            
             if let title = video?.title {
                 let size = CGSize(width: (frame.width - 16 - 44 - 8 - 16), height: 1000)
                 let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
@@ -69,6 +64,20 @@ class VideoCell: BaseCell {
         }
     }
     
+    
+    // video 5/20, 28:00
+    func setupThumbnailImage() {
+        if let thumbnailImageUrl = video?.thumbnailImageName {
+            thumbnailImageView.loadImageUsingUrlString(urlString: thumbnailImageUrl)
+        }
+    }
+    func setupProfileImage() {
+        if let profileImageUrl = video?.channel?.profileImageName {
+            userProfileImageView.loadImageUsingUrlString(urlString: profileImageUrl)
+        }
+    }
+    
+    
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "taylor_swift_blank_space")
@@ -84,6 +93,8 @@ class VideoCell: BaseCell {
         // Corner radius needs to be half of width/height of entire frame
         imageView.layer.cornerRadius = 22
         imageView.layer.masksToBounds = true
+        
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -153,3 +164,6 @@ class VideoCell: BaseCell {
     }
     
 }
+
+
+
