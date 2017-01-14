@@ -115,13 +115,17 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.setRightBarButtonItems([moreButton, searchBarButtonItem], animated: false)
         
     }
+    
     func handleSearch() {
         print(123)
     }
-    func handleMore() {
-        
-    }
     
+    let settingsLauncher = SettingsLauncher()
+    
+    func handleMore() {
+        // Show Menu
+        settingsLauncher.showSettings()
+    }
     
     
     let menuBar: MenuBar = {
