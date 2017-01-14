@@ -12,6 +12,8 @@
 		4FF5414C1E28D3B8004C9F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5414A1E28D3B8004C9F5B /* Main.storyboard */; };
 		4FF5414E1E28D3B8004C9F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5414D1E28D3B8004C9F5B /* Assets.xcassets */; };
 		4FF541511E28D3B8004C9F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5414F1E28D3B8004C9F5B /* LaunchScreen.storyboard */; };
+		4FF5415A1E2A238A004C9F5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF541591E2A238A004C9F5B /* Extensions.swift */; };
+		4FF5415F1E2A23F8004C9F5B /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5415E1E2A23F8004C9F5B /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4FF5414D1E28D3B8004C9F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FF541501E28D3B8004C9F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FF541521E28D3B8004C9F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF541591E2A238A004C9F5B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4FF5415E1E2A23F8004C9F5B /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		4FF541451E28D3B8004C9F5B /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				4FF5415D1E2A23CA004C9F5B /* Model */,
+				4FF5415C1E2A23C5004C9F5B /* View */,
+				4FF5415B1E2A23BD004C9F5B /* Controller */,
+				4FF541581E2A237B004C9F5B /* Helpers */,
 				4FF541461E28D3B8004C9F5B /* AppDelegate.swift */,
-				4FF541481E28D3B8004C9F5B /* HomeController.swift */,
 				4FF5414A1E28D3B8004C9F5B /* Main.storyboard */,
 				4FF5414D1E28D3B8004C9F5B /* Assets.xcassets */,
 				4FF5414F1E28D3B8004C9F5B /* LaunchScreen.storyboard */,
 				4FF541521E28D3B8004C9F5B /* Info.plist */,
 			);
 			path = YouTube;
+			sourceTree = "<group>";
+		};
+		4FF541581E2A237B004C9F5B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4FF541591E2A238A004C9F5B /* Extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		4FF5415B1E2A23BD004C9F5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FF541481E28D3B8004C9F5B /* HomeController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4FF5415C1E2A23C5004C9F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5415E1E2A23F8004C9F5B /* VideoCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4FF5415D1E2A23CA004C9F5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF541491E28D3B8004C9F5B /* HomeController.swift in Sources */,
+				4FF5415F1E2A23F8004C9F5B /* VideoCell.swift in Sources */,
+				4FF5415A1E2A238A004C9F5B /* Extensions.swift in Sources */,
 				4FF541471E28D3B8004C9F5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
