@@ -120,11 +120,30 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         print(123)
     }
     
-    let settingsLauncher = SettingsLauncher()
+    lazy var settingsLauncher: SettingsLauncher = {
+        let launcher = SettingsLauncher()
+        // video 9/20, 11:00
+        // used to homeController not nil in SettingsLauncher
+        launcher.homeController = self
+        return launcher
+    }()
     
     func handleMore() {
         // Show Menu
         settingsLauncher.showSettings()
+        
+        
+    }
+    
+    func showControllerForSetting(setting: Setting) {
+        // Push new controller unto stack
+        let dummySettingsViewController = UIViewController()
+        dummySettingsViewController.view.backgroundColor = UIColor.white
+        dummySettingsViewController.navigationItem.title = setting.name
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.pushViewController(dummySettingsViewController, animated: true)
+        
     }
     
     
@@ -140,6 +159,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
     }
     
+    
+    
+    
+    // HOME VC - COLLECTION VIEW FUNCTIONS
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
