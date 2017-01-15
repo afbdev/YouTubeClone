@@ -9,13 +9,22 @@
 import UIKit
 
 class Setting: NSObject {
-    let name: String
+    let name: SettingName
     let imageName: String
     
-    init(name: String, imageName: String) {
+    init(name: SettingName, imageName: String) {
         self.name = name
         self.imageName = imageName
     }
+}
+
+enum SettingName: String {
+    case Cancel = "Cancel"
+    case Settings = "Settings"
+    case TermsPrivacy = "Terms & privacy policy"
+    case SendFeedback = "Feedback"
+    case Help = "Help"
+    case SwitchAccount = "Switch Account"
 }
 
 
@@ -36,7 +45,14 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
     
     let settings: [Setting] = {
         
-        return [Setting(name: "Settings", imageName: "settings"), Setting(name: "Terms & privacy policy", imageName: "privacy"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Help", imageName: "help"), Setting(name: "Switch Account", imageName: "switch_account"), Setting(name: "Cancel", imageName: "cancel")]
+        let settingsSetting = Setting(name: .Settings, imageName: "settings")
+        let settingsTerms = Setting(name: .TermsPrivacy, imageName: "privacy")
+        let settingsFeedback = Setting(name: .SendFeedback, imageName: "feedback")
+        let settingsHelp = Setting(name: .Help, imageName: "help")
+        let settingsSwitchAccount = Setting(name: .SwitchAccount, imageName: "switch_account")
+        let settingsCancel = Setting(name: .Cancel, imageName: "cancel")
+        
+        return [settingsSetting, settingsTerms, settingsFeedback, settingsHelp, settingsSwitchAccount, settingsCancel]
     }()
     
     var homeController: HomeController?
@@ -79,7 +95,7 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         }) { (completed: Bool) in
             
             
-            if setting.name != "" && setting.name != "Cancel" {
+            if setting.name != .Cancel {
                 self.homeController?.showControllerForSetting(setting: setting)
             }
         }
