@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F6BDBE61E2AA2E100A63531 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDBE51E2AA2E100A63531 /* SettingsLauncher.swift */; };
+		4F6BDBE81E2AB0A800A63531 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDBE71E2AB0A800A63531 /* SettingCell.swift */; };
 		4FF541471E28D3B8004C9F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF541461E28D3B8004C9F5B /* AppDelegate.swift */; };
 		4FF541491E28D3B8004C9F5B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF541481E28D3B8004C9F5B /* HomeController.swift */; };
 		4FF5414C1E28D3B8004C9F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5414A1E28D3B8004C9F5B /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		4F6BDBE51E2AA2E100A63531 /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		4F6BDBE71E2AB0A800A63531 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		4FF541431E28D3B8004C9F5B /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF541461E28D3B8004C9F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FF541481E28D3B8004C9F5B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				4FF5415E1E2A23F8004C9F5B /* VideoCell.swift */,
 				4FF541601E2A26BF004C9F5B /* MenuBar.swift */,
+				4F6BDBE71E2AB0A800A63531 /* SettingCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				4FF541491E28D3B8004C9F5B /* HomeController.swift in Sources */,
 				4FF541631E2A4C07004C9F5B /* Video.swift in Sources */,
+				4F6BDBE81E2AB0A800A63531 /* SettingCell.swift in Sources */,
 				4FF5415F1E2A23F8004C9F5B /* VideoCell.swift in Sources */,
 				4F6BDBE61E2AA2E100A63531 /* SettingsLauncher.swift in Sources */,
 				4FF5415A1E2A238A004C9F5B /* Extensions.swift in Sources */,
